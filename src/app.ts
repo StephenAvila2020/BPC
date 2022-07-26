@@ -24,7 +24,6 @@ app.use(
   );
 
 app.use(Router);
-
-app.listen(port, () => {
-    console.log("Application listening on port " + port);
+app.listen(port || 1234, () => {
+    console.log("Application listening on port " + port || 1234);
 })

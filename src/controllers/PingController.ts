@@ -1,4 +1,4 @@
-import { Get, Route, Query } from 'tsoa';
+import { Get, Route } from 'tsoa';
 
 interface PingResponse {
     message: string;

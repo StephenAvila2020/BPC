@@ -1,7 +1,10 @@
 FROM node:16.14.2
-WORKDIR /usr/src/app
-COPY package*.json ./
+WORKDIR /usr/app
+COPY *.json ./
+COPY ./src ./src
+COPY .env .
 RUN npm ci --only=production
 RUN npm run build
-COPY ./dist .
+RUN rm -rf src/
 EXPOSE 1234
+CMD ["npm", "run", "start"]
