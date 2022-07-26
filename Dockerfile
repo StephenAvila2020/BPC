@@ -4,7 +4,6 @@ ENV PORT=$APP_PORT
 WORKDIR /usr/app
 COPY *.json ./
 COPY ./src ./src
-COPY .env .
 RUN npm ci --only=production
 RUN npm run build
 RUN rm -rf src/
