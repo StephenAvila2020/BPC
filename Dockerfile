@@ -1,4 +1,5 @@
 FROM node:16.14.2
+PORT=${{ secrets.APP_PORT }}
 WORKDIR /usr/app
 COPY *.json ./
 COPY ./src ./src
