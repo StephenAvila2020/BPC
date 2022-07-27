@@ -1,10 +1,7 @@
 import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
 import morgan from 'morgan';
 import swaggerUi from 'swagger-ui-express';
 import Router from './routes';
-
-dotenv.config();
 
 const app: Express = express();
 
