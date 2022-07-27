@@ -7,7 +7,6 @@ import Router from './routes';
 dotenv.config();
 
 const app: Express = express();
-const port = process.env.APP_PORT;
 
 app.use(express.json());
 app.use(morgan("tiny"));
@@ -24,6 +23,6 @@ app.use(
   );
 
 app.use(Router);
-app.listen(port || 1234, () => {
-    console.log("Application listening on port " + port || 1234);
+app.listen(8080, () => {
+    console.log("Application listening on port 8080");
 })
