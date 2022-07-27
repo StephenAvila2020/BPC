@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: boo-ping-controller-deployment
+  labels:
+    app: boo-ping-controller
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: boo-ping-controller
+  template:
+    metadata:
+      labels: 
+        app: boo-ping-controller
+    spec:
+      containers:
+      - name: boo-ping-controller
+        image: 712283413804.dkr.ecr.us-east-2.amazonaws.com/firstecr:latest
+        ports:
+        - containerPort: 8080
+    
