@@ -17,7 +17,7 @@ spec:
       containers:
       - name: boo-ping-controller
         image: 712283413804.dkr.ecr.us-east-2.amazonaws.com/firstecr:latest
-        imagePullPolicy: Always
         ports:
         - containerPort: 8080
+        imagePullPolicy: Always
     
