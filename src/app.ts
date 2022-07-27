@@ -13,7 +13,7 @@ app.use(morgan("tiny"));
 app.use(express.static("public"));
 
 app.get('/', (_req: Request, res: Response) => {
-  return res.status(200).send("Boo!");
+  return res.status(200).send("Boo! V2");
 })
 
 app.use(
